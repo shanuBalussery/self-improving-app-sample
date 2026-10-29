@@ -1,3 +1,5 @@
+import 'package:base_project/features/feedback/view/feedback_screen.dart';
+import 'package:base_project/features/home/view/home_screen.dart';
 import 'package:base_project/features/splashscreen/view/splashscreen.dart';
 import 'package:base_project/utils/connection_failed_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +16,10 @@ Widget? _getScreen(RouteSettings settings) {
       return ConnectionFailedScreen(
         param: params,
       );
+    case HomeScreen.routeName:
+      return HomeScreen();
+    case FeedbackScreen.routeName:
+      return FeedbackScreen();
     // case OwnerManageUserScreen.route:
     //   OwnerManageUserScreenParams params =
     //       settings.arguments as OwnerManageUserScreenParams;
